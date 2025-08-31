@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>HESAP DEFTERİ</title>
+<style>
+/* Mevcut tüm CSS kodun aynen buraya gelecek */
+body{font-family:'Segoe UI',sans-serif;margin:0;background:#f0f2f5;color:#333;transition:0.3s;}
+body.dark-mode{background:#121212;color:#e0e0e0;}
+header{background:linear-gradient(90deg,#4e54c8,#8f94fb);color:white;padding:25px;text-align:center;font-size:30px;font-weight:bold;letter-spacing:1px;box-shadow:0 4px 12px rgba(0,0,0,0.2);}
+.container{max-width:1100px;margin:auto;padding:20px;}
+input,select,button{padding:10px 12px;margin:5px 0;border-radius:10px;border:1px solid #ccc;font-size:14px;transition:0.3s;}
+input:focus,select:focus{border-color:#4e54c8;outline:none;box-shadow:0 0 8px rgba(78,84,200,0.4);}
+button{background:#4e54c8;color:white;border:none;cursor:pointer;font-weight:bold;transition:0.3s;box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+button:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,0.2);}
+.form,.section{background:white;padding:25px;border-radius:20px;margin-bottom:25px;box-shadow:0 8px 20px rgba(0,0,0,0.08);transition:0.3s;}
+body.dark-mode .form,body.dark-mode .section{background:#1f1f2e;}
+.countdown{padding:18px;border-radius:15px;margin-bottom:15px;box-shadow:0 6px 18px rgba(0,0,0,0.1);display:flex;justify-content:space-between;align-items:center;transition:0.3s;color:white;}
+.countdown-details{flex-grow:1;margin-right:12px;}
+.countdown-details em{display:block;font-size:13px;color:#f0f0f0;}
+.progress-bar{height:8px;background:#e0e0e0;border-radius:4px;overflow:hidden;margin-top:6px;}
+.progress{height:100%;background:linear-gradient(90deg,#28a745,#85e085);transition:0.3s;}
+.btn{padding:6px 14px;border:none;border-radius:8px;cursor:pointer;font-size:13px;font-weight:bold;margin-left:6px;transition:0.3s;}
+.btn-edit{background:#28a745;color:white;}
+.btn-edit:hover{background:#218838;}
+.btn-delete{background:#dc3545;color:white;}
+.btn-delete:hover{background:#b02a37;}
+table{width:100%;border-collapse:collapse;margin-top:12px;border-radius:12px;overflow:hidden;box-shadow:0 6px 16px rgba(0,0,0,0.05);}
+th,td{padding:14px;text-align:left;}
+th{background:#4e54c8;color:#fff;}
+tr:nth-child(even){background:#f9f9f9;}
+tr:hover{background:#eef4ff;}
+body.dark-mode tr:nth-child(even){background:#2a2a3c;}
+body.dark-mode tr:hover{background:#3a3a4f;}
+.modal{display:none;position:fixed;z-index:1000;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);}
+.modal-content{background:#fff;margin:10% auto;padding:25px;border-radius:15px;max-width:400px;box-shadow:0 8px 24px rgba(0,0,0,0.2);}
+body.dark-mode .modal-content{background:#2c2c3c;color:#e0e0e0;}
+.modal-content input{width:100%;padding:10px;margin:10px 0;border:1px solid #ccc;border-radius:8px;}
+body.dark-mode .modal-content input{background:#3a3a4a;border:1px solid #555;color:#fff;}
+.close{float:right;font-size:22px;cursor:pointer;}
+.search-bar{width:100%;max-width:300px;padding:10px;margin:10px 0;border-radius:10px;border:1px solid #ccc;}
+</style>
+</head>
+<body>
+<header>📒 HESAP DEFTERİ</header>
+<div class="container">
+<button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+<!-- Mevcut HTML yapısı aynen buraya gelecek -->
+<!-- ... buraya tüm form, sayaç, kazanç, satılan itemler, geçmiş işlemler HTML'i ... -->
+
+</div>
+
+<div id="editModal" class="modal">
+<div class="modal-content">
+<span class="close" onclick="closeModal()">&times;</span>
+<h3>✏️ İşlem Düzenle</h3>
+<input type="text" id="editName" placeholder="Müşteri Adı">
+<select id="editCategory">
+<option value="VIP">VIP</option>
+<option value="ÖNCELİKLİ">ÖNCELİKLİ</option>
+<option value="STANDART">STANDART</option>
+</select>
+<input type="number" id="editAmount" placeholder="Kazanç (M)">
+<input type="text" id="editNote" placeholder="Not">
+<button class="btn btn-edit" onclick="saveEdit()">💾 Kaydet</button>
+</div>
+</div>
+
+<script>
+// Tüm mevcut JS kodları aynen buraya gelecek
+</script>
+</body>
+</html>
